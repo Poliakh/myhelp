@@ -1,0 +1,120 @@
+	
+	//  заметки по терминалу 
+
+		echo test.txt //создаёт файл
+		test.txt echo change > test.txt //добавляет слово change в файл test.txt
+		rm [путь/имя файла] // удаляет файл
+		//создание проекта
+		//создаем конфигурации
+
+		.gitignore // файл с списком игнорируемых файлов
+		
+		git config --global user.name "Poliakh Roman"
+		git config --global user.email "r.poliakh@gmail.com"
+		// запускаем в папке проекта  
+		git init // инициализация проекта
+		git config user.name "test User"
+		git config user.email "test@litle.com"
+
+	//-----alias-------
+	$ git config --global alias.st status // "git status"  по ключю  "git st"
+
+	$ git config --global alias.unstage 'reset HEAD --'
+	$ git reset HEAD -- fileA
+
+
+	//------нидексация--------
+
+		-a -m"[masage]" //
+		add . //индексирование  всех файлов
+		add [имя файла] // индексирование файла
+		rm --cached [имя файла] // исключить индексирование файла
+
+		commit -a -m"[masage]" //коммит всех файлов без предварительной индексации (бещ add)
+		commit -m"[masage]" // добавить коммит
+		commit --amend // перезапись последнего коммита
+
+		diff	//показывает проиндексированные изменения
+		diff --cached || git diff --staged //покажет непроиндексированные изменения
+
+
+		checkout --[имя файла]  // восстановить последний коммит
+		checkout [хешкод] //переход к комиту
+
+
+		git help [key]// отправка на страницу справки по ключику, анпример  "git help log"
+
+	// ---------- логи ---------
+
+		log //просмотр истории коммитов
+		log --pretty=format:"%h - %an, %ar : %s" // вывод информации хешкод - имя атвора, когда сделано : комментарий
+		log --pretty=oneline // выводит коммиты строками
+		log --pretty=oneline --author ="[имя юзера]" // выводит коммиты строками
+		log --pretty= format:'%h %ad | %s%d' --date=short //клевый шаблон
+		log --since=weeks //лог за последние две недели
+		log -p -2 // показать изменения последних двух коммитов
+		log -p --word-diff//  толком не понял что отобразить, что-то там с разницей в коментах по слову
+		log --stat // log c списком измененных вайлов
+
+	
+	//-------замена редактора для коммита--------
+	
+
+		git config --global core.editor "'C:\Users\Roman\Downloads\emacs-26.1-x86_64\bin\emacs.exe' -multiInst -notabbar -nosession -noPlugin"
+	
+	//-------------ветки-----------------
+	
+		remote // посмотреть удаленные ркпозитории
+		remote -v //  посмотреть адрес репозитария
+		remote add [сокращение] [url]  //добавление удаленного репозитория
+		remote show //инспеция  удаленного репозитория
+		remote rename // переименование удаленного репозитория
+		remote rm [имя репа]//удалить ссылку на ветку
+
+		checkout -b [имя ветки] // создание и переход в новую ветку
+		branch [имя ветки] // создание ветки
+		branch //просмоgit ыетр веток
+		branch -v // просмотр версии веток
+		branch -d [имя ветки] // удалить ветку
+		git branch --merged // --no-merged позволяют осмотреть какие ветки слиты (или не слиты)
+		checkout [имя ветки] //  переход в ветку
+
+		git clone [url] -b [имя ветки] //скпоирует нужную ветку
+		$ git checkout -b  [имя ветки] origin/[имя ветки на реп] // добавить нужную ветку
+
+
+
+
+
+
+	//--------- корзина -----------
+
+		git stash list	// отобразить список stash
+		git stash show	// показать последнее изменение
+		git stash apply	// показать последнее изменение
+		git stash drop	// удаляет последни stash
+		git stash clear	// удаляет все stash
+	
+	//--- плагин разрешения конфликтов---
+
+		git config --global mergetool.kdiff3.cmd '"D:\\Program Files\\KDiff3\\kdifа3" $BASE $LOCAL $REMOTE -o $MERGED' //  подключение  плагина KDiff3 (предварительно установить в системе)
+		git config --global merge.tool kdiff3 // указать чем программе разбирать конфликт
+		
+		merge [имя ветки с которой объеденяемся] // мерджим
+		romote -v //  посмотреть версии репозиториев
+		git config --global push.default matching //будет пушить те ветки которые уже есть в репозитории
+		git config --global push.default simple //будет пушить только текущую ветку
+
+	//----------возврат изменение-------------- 
+		 git reset --soft HEAD^ //отменит комит но не изменения которые были сделаны
+		git reset HEAD  text.txt // отмена индексирования
+		//  после сброса необходимо сделать   git checkout text.txt  для возврата состояния файла
+		git revert --abort // отмена отката 
+		// редоактор в консоли 
+		vim [имя файлв для редактированя] // для выходна набрать  :qa!
+
+		git mv [old name] [new name] //переименование файла
+
+
+		///
+		
