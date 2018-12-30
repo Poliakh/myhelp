@@ -1,4 +1,4 @@
-	
+﻿	
 	//  заметки по терминалу 
 		echo test.txt //создаёт файл "test.txt"
 		test.txt echo change > test.txt //добавляет слово change в файл test.txt
@@ -35,7 +35,7 @@
 		commit -a -m"[masage]" //коммит всех файлов без предварительной индексации (бещ add)
 		commit -m"[masage]" // добавить коммит
 		commit --amend // перезапись последнего коммита
-
+		
 		diff	//показывает проиндексированные изменения
 		ls-files	//проиндексированные файлы
 		diff --cached || git diff --staged //покажет непроиндексированные изменения
@@ -120,4 +120,4 @@
 
 
 		///
-		
+		pull [remoteName] [branch]  --allow-unrelated-histories  // для слияние независимых веток одного проекта
