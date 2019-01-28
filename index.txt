@@ -101,6 +101,7 @@
 	//--- плагин разрешения конфликтов---
 
 		git config --global mergetool.kdiff3.cmd '"D:\\Program Files\\KDiff3\\kdifа3" $BASE $LOCAL $REMOTE -o $MERGED' //  подключение  плагина KDiff3 (предварительно установить в системе)
+		https://youtu.be/xAKnRuYobdc?list=PLoonZ8wII66iUm84o7nadL-oqINzBLk5g&t=430 //отсюда
 		git config --global merge.tool kdiff3 // указать чем программе разбирать конфликт
 		
 		merge [имя ветки с которой объеденяемся] // мерджим
