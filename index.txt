@@ -17,7 +17,14 @@
 		git init // инициализация проекта
 		git config user.name "test User"
 		git config user.email "test@litle.com"
-
+		
+		
+	//node
+	npm update npm -g //обновить node
+	npm list --depth=0 // список становленных пакетов
+	npm outdated --depth=0 // список установленных пакетов требующих обновления
+	npm uninstall package // удаление пакета по имени
+	
 	//-----alias-------
 	$ git config --global alias.st status // "git status"  по ключю  "git st"
 
@@ -39,11 +46,11 @@
 		diff	//показывает проиндексированные изменения
 		ls-files	//проиндексированные файлы
 		diff --cached || git diff --staged //покажет непроиндексированные изменения
-
+		clean -f -d // удаление всех неостлеживаемых файлов
 
 		checkout --[имя файла]  // восстановить последний коммит
 		checkout [хешкод] //переход к комиту
-
+		
 
 		git help [key]// отправка на страницу справки по ключику, анпример  "git help log"
 
