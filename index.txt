@@ -42,7 +42,14 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 		git init // инициализация проекта
 		git config user.name "test User"
 		git config user.email "test@litle.com"
-
+		
+		
+	//node
+	npm update npm -g //обновить node
+	npm list --depth=0 // список становленных пакетов
+	npm outdated --depth=0 // список установленных пакетов требующих обновления
+	npm uninstall package // удаление пакета по имени
+	
 	//-----alias-------
 	$ git config --global alias.st status // "git status"  по ключю  "git st"
 
@@ -64,11 +71,11 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 		diff	//показывает проиндексированные изменения
 		ls-files	//проиндексированные файлы
 		diff --cached || git diff --staged //покажет непроиндексированные изменения
-
+		clean -f -d // удаление всех неостлеживаемых файлов
 
 		checkout --[имя файла]  // восстановить последний коммит
 		checkout [хешкод] //переход к комиту
-
+		
 
 		git help [key]// отправка на страницу справки по ключику, анпример  "git help log"
 
@@ -126,6 +133,7 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 	//--- плагин разрешения конфликтов---
 
 		git config --global mergetool.kdiff3.cmd '"D:\\Program Files\\KDiff3\\kdifа3" $BASE $LOCAL $REMOTE -o $MERGED' //  подключение  плагина KDiff3 (предварительно установить в системе)
+		https://youtu.be/xAKnRuYobdc?list=PLoonZ8wII66iUm84o7nadL-oqINzBLk5g&t=430 //отсюда
 		git config --global merge.tool kdiff3 // указать чем программе разбирать конфликт
 		
 		merge [имя ветки с которой объеденяемся] // мерджим
