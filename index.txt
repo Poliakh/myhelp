@@ -152,10 +152,7 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 
 		git mv [old name] [new name] //переименование файла
 
-
-		///
-<<<<<<< HEAD
 		pull [remoteName] [branch]  --allow-unrelated-histories  // для слияние независимых веток одного проекта
-=======
+
 		
->>>>>>> 4a06a448909687754d2e0b4e8d9dfd3947e47e64
+
