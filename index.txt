@@ -2,6 +2,9 @@
 npm install npm@latest -g
 
 // Комманды npm, которые нам пригодятся :
+npm update npm -g //обновить node
+npm list --depth=0 // список установленных пакетов
+npm outdated --depth=0 // список установленных пакетов требующих обновления
 
 npm list - список всех установленных пакетов
 npm -g ls --depth=0 - список глобально установленнных пакетов
@@ -14,6 +17,7 @@ npm uninstall  package_name - удаление пакета
 npm install - установить все пакеты, перечисленные в package.json
 Перед запуском в продакшн npm shrinkwrap - фиксируем версии пакетов,теперь npm install будет устанавливать именно их и вы будете уверены что все будет работать как надо
 
+
 // Сокращения
 -v: --version
 -g: --global
@@ -25,6 +29,8 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 	
 
 	//  заметки по терминалу 
+		~/.gitconfig // глобальный конфиг git
+
 		echo test.txt //создаёт файл "test.txt"
 		test.txt echo change > test.txt //добавляет слово change в файл test.txt
 		touch test.txt//создать файл
@@ -38,18 +44,13 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 		
 		git config --global user.name "Poliakh Roman"
 		git config --global user.email "r.poliakh@gmail.com"
+		
 		// запускаем в папке проекта  
 		git init // инициализация проекта
 		git config user.name "test User"
 		git config user.email "test@litle.com"
 		
 		
-	//node
-	npm update npm -g //обновить node
-	npm list --depth=0 // список становленных пакетов
-	npm outdated --depth=0 // список установленных пакетов требующих обновления
-	npm uninstall package // удаление пакета по имени
-	
 	//-----alias-------
 	$ git config --global alias.st status // "git status"  по ключю  "git st"
 
@@ -63,6 +64,7 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 		add . //индексирование  всех файлов
 		add [имя файла] // индексирование файла
 		rm --cached [имя файла] // исключить индексирование файла
+		git rm -r --cached [folder_name]// удаление папки из индексирования
 
 		commit -a -m"[masage]" //коммит всех файлов без предварительной индексации (бещ add)
 		commit -m"[masage]" // добавить коммит
@@ -72,6 +74,7 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 		ls-files	//проиндексированные файлы
 		diff --cached || git diff --staged //покажет непроиндексированные изменения
 		clean -f -d // удаление всех неостлеживаемых файлов
+
 
 		checkout --[имя файла]  // восстановить последний коммит
 		checkout [хешкод] //переход к комиту
@@ -85,7 +88,7 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 		log --pretty=format:"%h - %an, %ar : %s" // вывод информации хешкод - имя атвора, когда сделано : комментарий
 		log --pretty=oneline // выводит коммиты строками
 		log --pretty=oneline --author ="[имя юзера]" // выводит коммиты строками
-		log --pretty= format:'%h %ad | %s%d' --date=short //клевый шаблон
+		log --pretty=format:'%h %ad | %s%d' --date=short //клевый шаблон
 		log --since=weeks //лог за последние две недели
 		log -p -2 // показать изменения последних двух коммитов
 		log -p --word-diff//  толком не понял что отобразить, что-то там с разницей в коментах по слову
@@ -153,8 +156,4 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 
 
 		///
-<<<<<<< HEAD
 		pull [remoteName] [branch]  --allow-unrelated-histories  // для слияние независимых веток одного проекта
-=======
-		
->>>>>>> 4a06a448909687754d2e0b4e8d9dfd3947e47e64
