@@ -79,7 +79,6 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 		checkout --[имя файла]  // восстановить последний коммит
 		checkout [хешкод] //переход к комиту
 		
-
 		git help [key]// отправка на страницу справки по ключику, анпример  "git help log"
 
 	// ---------- логи ---------
@@ -93,7 +92,7 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 		log -p -2 // показать изменения последних двух коммитов
 		log -p --word-diff//  толком не понял что отобразить, что-то там с разницей в коментах по слову
 		log --stat // log c списком измененных вайлов
-
+		log --graph //просмотр ситории в графическом виде.
 	
 	//-------замена редактора для коммита--------
 	
@@ -121,11 +120,6 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 		git clone -b [имя ветки] [url] .//скопировать нужную ветку в текущую папку
 		git checkout -b  [имя ветки] origin/[имя ветки на реп] // добавить нужную ветку
 
-
-
-
-
-
 	//--------- корзина -----------
 
 		git stash list	// отобразить список stash
@@ -146,6 +140,7 @@ https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka
 		git config --global push.default simple //будет пушить только текущую ветку
 
 	//----------возврат изменение-------------- 
+	
 		 git reset --soft HEAD^ //отменит комит но не изменения которые были сделаны
 		git reset HEAD  text.txt // отмена индексирования
 		//  после сброса необходимо сделать   git checkout text.txt  для возврата состояния файла
