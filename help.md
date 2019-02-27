@@ -29,7 +29,8 @@
 -y: --yes
 -n: --yes false
 ```
-[установка Gulp](https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka)
+[установка Gulp](https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka)  
+
 **Заметки по терминалу**  
 ---  
 `~/.gitconfig` - глобальный конфиг git  
