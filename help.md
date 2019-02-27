@@ -21,9 +21,13 @@
 `npm init`- создать package.json
 
 `npm install package_name` - установить пакет (package_name - название нужного пакета)
-`npm install package_name --save-dev` - установить пакет и вносит запись о нем в package.json в секцию devDependencies
+
+`npm install package_name --save-dev` - установить пакет и вносит запись о нем в package.json в секцию devDependencie
+
 `npm uninstall  package_name` - удаление пакета
+
 `npm install` - установить все пакеты, перечисленные в package.json
+
 >Перед запуском в продакшн **npm shrinkwrap** - фиксируем версии пакетов,теперь **npm install** будет устанавливать именно их и вы будете уверены что все будет работать как надо
 
 
@@ -42,11 +46,17 @@
 		`~/.gitconfig` - глобальный конфиг git
 
 `echo test.txt` - создаёт файл "test.txt"
+
 `test.txt echo change > test.txt` - добавляет слово change в файл test.txt
+
 `touch test.txt` - создать файл
+
 `mkdir block`  - создать папку 'block'
+
 `mkdir block/{1,2,3} ` -	создать папки 1,2 и 3 в папке 'block'
+
 `rm [путь/имя файла]` - удаляет файл
+
 		**создание проекта**
 		**создаем конфигурации**
 
