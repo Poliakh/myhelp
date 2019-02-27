@@ -1,9 +1,9 @@
 ﻿## Комманды npm, которые нам пригодятся :
 
 
-`npm install npm@latest -g` - node установить последнюю версию:
-`npm update npm -g`  - обновить node
-`npm list --depth=0` - список установленных пакетов
+`npm install npm@latest -g` - node установить последнюю версию:  
+`npm update npm -g`  - обновить node  
+`npm list --depth=0` - список установленных пакетов  
 
 `npm outdated --depth=0` - список установленных пакетов требующих обновления
 
