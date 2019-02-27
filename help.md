@@ -61,13 +61,20 @@
 		**создаем конфигурации**
 
 `.gitignore` - файл с списком игнорируемых файлов
+
 `git config --global user.name "Poliakh Roman"`
+
 `git config --global user.email "r.poliakh@gmail.com"`
+
 		
 **запускаем в папке проекта**
+
 `git init` - инициализация проекта
+
 `git config user.name "test User"`
+
 `git config user.email "test@litle.com"`
+
 		
 		
 ### --- alias ---
@@ -75,6 +82,7 @@
 `git config --global alias.st status` - __"git status"__  по ключу  __"git st"__
 
 `git config --global alias.unstage 'reset HEAD --'`
+
 `git reset HEAD -- fileA`
 
 
@@ -82,21 +90,31 @@
 
 `git -a -m"[masage]"` 
 `git add .` - индексирование  всех файлов
+
 `git add [имя файла]` - индексирование файла
+
 `git rm --cached [имя файла]` - исключить индексирование файла
+
 `git rm -r --cached [folder_name]` - удаление папки из индексирования
 
 `git commit -a -m"[masage]"` - коммит всех файлов без предварительной индексации (без add)
+
 `git commit -m"[masage]"` - добавить коммит
+
 `git commit --amend` - перезапись последнего коммита
 		
 `git diff` - показывает проиндексированные изменения
+
 `git ls-files` - проиндексированные файлы
+
 `git diff --cached || git diff --staged` - покажет непроиндексированные изменения
+
 `git clean -f -d` - удаление всех неотслеживаемых файлов
 
 
+
 `git checkout --[имя файла]`- восстановить последний коммит
+
 `git checkout [хешкод]` - переход к коммиту
 		
 
@@ -105,52 +123,74 @@
 ### --- логи ---
 
 `git log` - просмотр истории коммитов
+
 `git log --pretty=format:"%h - %an, %ar : %s"` - вывод информации хешкод - имя атвора, когда сделано : комментарий
+
 `git log --pretty=oneline` - выводит коммиты строками
+
 `git log --pretty=oneline --author ="[имя юзера]"` - выводит коммиты строками
+
 `git log --pretty=format:'%h %ad | %s%d' --date=short` - клевый шаблон
+
 `git log --since=weeks` - лог за последние две недели
+
 `git log -p -2` - показать изменения последних двух коммитов
+
 `git log -p --word-diff ` - толком не понял что отобразить, что-то там с разницей в коментах по слову
+
 `git log --stat` - log c списком измененных вайлов
 
 	
 ### ---замена редактора для коммита---
 
-`git config --global core.editor "'C:\Users\Roman\Downloads\emacs-					26.1-x86_64\bin\emacs.exe' -multiInst -notabbar -nosession -noPlugin"`
+`git config --global core.editor "'C:\Users\Roman\Downloads\emacs-					26.1-x86_64\bin\emacs.exe' 
+
+-multiInst -notabbar -nosession -noPlugin"`
 	
 ### ---ветки---
 	
 `git remote` - посмотреть удаленные ркпозитории
+
 `git remote -v` - посмотреть адрес репозитария
+
 `git remote add [сокращение] [url]` - добавление удаленного репозитория
+
 `git remote show` - инспеция  удаленного репозитория
+
 `git remote rename [oldName][newName]` - переименование удаленного репозитория
+
 `git remote rm [имя репа]` - удалить ссылку на ветку
 
 `git checkout -b [имя ветки]` - создание и переход в новую ветку
+
 `git branch [имя ветки]` - создание ветки
+
 `git branch` - просмоgit ыетр веток
+
 `git branch -v` - просмотр версии веток
+
 `git branch -d [имя ветки]` - удалить ветку
+
 `git git branch --merged || --no-merged` - позволяют осмотреть какие ветки слиты (или не слиты)
+
 `git checkout [имя ветки] ` - переход в ветку
 
 `git clone [url] -b [имя ветки]` - скпоирует нужную ветку
+
 `git clone -b [имя ветки] [url] .` - скопировать нужную ветку в текущую папку
+
 `git checkout -b  [имя ветки] origin/[имя ветки на реп]` - добавить нужную ветку
-
-
-
-
-
 
 ### --- корзина ---
 
 `git stash list` - отобразить список stash
+
 `git stash show` - показать последнее изменение
+
 `git stash apply` - показать последнее изменение
+
 `git stash drop` - удаляет последни stash
+
 `git stash clear` - удаляет все stash
 	
 ### --- плагин разрешения конфликтов---
