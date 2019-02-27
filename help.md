@@ -196,19 +196,27 @@
 ### --- плагин разрешения конфликтов---
 
 `git config --global mergetool.kdiff3.cmd '"D:\\Program Files\\KDiff3\\kdifа3" $BASE $LOCAL $REMOTE -o $MERGED'` - подключение  плагина KDiff3 (предварительно установить в системе)
+
 		[Oтсюда(youtube)](https://youtu.be/xAKnRuYobdc?list=PLoonZ8wII66iUm84o7nadL-oqINzBLk5g&t=430)
+		
 `git config --global merge.tool kdiff3` - указать чем программе разбирать конфликт
+
 `git mergetool` - для запуска kdiff3
 
 		
 `git merge [имя ветки с которой объеденяемся] // мерджим
+
 `git romote -v` - посмотреть версии репозиториев
+
 `git config --global push.default matching` - будет пушить те ветки которые уже есть в репозитории
+
 `git config --global push.default simple` - будет пушить только текущую ветку
 
 ### ---возврат изменение---
 `git reset --soft HEAD^` - отменит коммит но не изменения которые были сделаны
+
 `git reset HEAD  text.txt` - отмена индексирования
+
 >после сброса необходимо сделать   __git checkout[namefiles]__  для возврата состояния файла
 >
 `git revert --abort` - отмена отката 
