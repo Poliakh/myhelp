@@ -2,16 +2,24 @@
 
 
 `npm install npm@latest -g` - node установить последнюю версию:
+
 `npm update npm -g`  - обновить node
+
 `npm list --depth=0` - список установленных пакетов
+
 `npm outdated --depth=0` - список установленных пакетов требующих обновления
+
 
 `npm list` - список всех установленных пакетов
 
 `npm -g ls --depth=0` - список глобально установленных пакетов
-`npm outdated`	- проверить, не устарели ли пакеты
-`npm update gulp` 		- обновление версий плагинов
-`npm init`					- создать package.json
+
+`npm outdated` - проверить, не устарели ли пакеты
+
+`npm update gulp` - обновление версий плагинов
+
+`npm init`- создать package.json
+
 `npm install package_name` - установить пакет (package_name - название нужного пакета)
 `npm install package_name --save-dev` - установить пакет и вносит запись о нем в package.json в секцию devDependencies
 `npm uninstall  package_name` - удаление пакета
