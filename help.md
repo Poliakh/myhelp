@@ -30,9 +30,8 @@
 -n: --yes false
 ```
 [установка Gulp](https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka)
-Заметки по терминалу**strong text**
-		`~/.gitconfig` - глобальный конфиг git  
-  
+**Заметки по терминалу**
+`~/.gitconfig` - глобальный конфиг git  
 `echo test.txt` - создаёт файл "test.txt"  
 `test.txt echo change > test.txt` - добавляет слово change в файл test.txt  
 `touch test.txt` - создать файл  
