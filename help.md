@@ -1,13 +1,14 @@
-﻿## Комманды npm, которые нам пригодятся :
+﻿[Makdown](https://guides.hexlet.io/markdown/) - синтаксис  
+[stackedit.io](https://stackedit.io/) - редактор  
+## Комманды npm:  
+___
 
 
-`npm install npm@latest -g` - node установить последнюю версию:  
+>`npm install npm@latest -g` - node установить последнюю версию:  
 `npm update npm -g`  - обновить node  
 `npm list --depth=0` - список установленных пакетов  
 `npm outdated --depth=0` - список установленных пакетов требующих обновления  
-
 `npm list` - список всех установленных пакетов  
-
 `npm -g ls --depth=0` - список глобально установленных пакетов  
 `npm outdated` - проверить, не устарели ли пакеты  
 `npm update gulp` - обновление версий плагинов  
@@ -15,11 +16,11 @@
 `npm install package_name` - установить пакет (package_name - название нужного пакета)  
 `npm install package_name --save-dev` - установить пакет и вносит запись о нем в package.jsonв секцию devDependencies  
 `npm uninstall package_name` - удаление пакета  
-`npm install` - установить все пакеты, перечисленные в package.json  
+`npm install || i` - установить все пакеты, перечисленные в package.json  
+
 >Перед запуском в продакшн **npm shrinkwrap** - фиксируем версии пакетов,теперь **npm install** будет устанавливать именно их и вы будете уверены что все будет работать как надо  
 
-
-### Сокращения
+### Сокращения  
 ---
 ```
 -v: --version
@@ -31,24 +32,53 @@
 ```
 [установка Gulp](https://simplamarket.com/blog/ispolzovanie-gulp-chast-1---ustanovka)  
 
-**Заметки по терминалу**  
+### Заметки по терминалу
 ---  
-`~/.gitconfig` - глобальный конфиг git  
-  
-`echo test.txt` - создаёт файл "test.txt"  
-`test.txt echo change > test.txt` - добавляет слово change в файл test.txt  
-`touch test.txt` - создать файл  
-`mkdir block`  - создать папку 'block'  
-`mkdir block/{1,2,3} ` -	создать папки 1,2 и 3 в папке 'block'  
+>`pwd` - отобразить путь к местонахождению  
+>* `ls` - просмотреть содержимое текущей папки  
+	* `-f` - отобразить дополнительные файлы  
+	* `-l` - информация о папках  
+	* `-a` - отобразить все скрытые файлы и папки  
+
+`clear` - очистить окно консоли  
+**Перемещение**
+>* `cd [путь или папка для перехода]` - смена дериктории  
+	* `cd ..` - подняться в деррикторию выше  
+	* `cd ../..` - подняться на два уровня вверх  
+	* `cd d:` - перейти на диск D  
+	* `cd -` - веонуться в предыдущую директорию  
+	* `cd ~silent control|| ~user` - переход в корневой каталог пользователя  
+
+**Создание удалени папок**  
+>`mkdir [nameFoller]` - создание папки  
+`mkdir [nameFoller1] [nameFoller2]` - созданиt создание двух папок  
+`mkdir [folder/folder2/folder3] -p` - создать дерево папок  
+`mkdir block/{1,2,3}` - создать папки 1,2 и 3 в папке 'block'  
+
+>`rmdir [nameFoller1]` - удаление пустой папки  или несокльких папок(через пробел)  
+`rm [folderName] -r` - удаление папки с содержимым  
+
+**Создание удаление файлов**  
+>`touch [имя файла]` - создание файла или нескольких (указывать через пробел)  
+`echo test.txt` - создаёт файл "test.txt" 
+`rm [имя файла]` - удаление файла или несокльких  
 `rm [путь/имя файла]` - удаляет файл  
-		**создание проекта**
-		**создаем конфигурации**
+`test.txt echo change > test.txt` - добавляет слово change в файл test.txt  
+
+
+
+
   
+## Cоздание проекта 
+___
+**создаем конфигурации**
+  
+`~/.gitconfig` - глобальный конфиг git  
 `.gitignore` - файл с списком игнорируемых файлов  
 `git config --global user.name "Poliakh Roman"`  
 `git config --global user.email "r.poliakh@gmail.com"`  
   
-**запускаем в папке проекта**
+**запускаем в папке проекта**  
 `git init` - инициализация проекта  
 `git config user.name "test User"`  
 `git config user.email "test@litle.com"`  
