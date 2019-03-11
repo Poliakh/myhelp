@@ -1,5 +1,5 @@
 ﻿[Makdown](https://guides.hexlet.io/markdown/) - синтаксис  
-[stackedit.io](https://stackedit.io/) - онлайн редактор .md
+[stackedit.io](https://stackedit.io/) - онлайн редактор .md  
 [Типичные ошипки  Git](https://habr.com/ru/company/flant/blog/419733/)
 
 [Список ссылкок для front-end](https://www.youtube.com/watch?v=hiM9q4dsO-E)   
