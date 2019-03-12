@@ -4,10 +4,8 @@
 
 [Список ссылкок для front-end](https://www.youtube.com/watch?v=hiM9q4dsO-E)   
 
-## Комманды npm:  
+## Комманды npm:   
 ___
-
-
 `npm install npm@latest -g` - node установить последнюю версию:  
 `npm update npm -g`  - обновить node  
 `npm list --depth=0` - список установленных пакетов  
@@ -73,7 +71,7 @@ ___
 
 
   
-## Cоздание проекта 
+## Cоздание проекта Git 
 ___
 **создаем конфигурации**
   
