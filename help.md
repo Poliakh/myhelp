@@ -4,6 +4,12 @@
 
 [Список ссылкок для front-end](https://www.youtube.com/watch?v=hiM9q4dsO-E)   
 
+* GIT  
+	* [конфигурация](#---создаем конфигурации---)  
+	* [запуск проекта](#---запускаем в папке проекта---)  
+	* [alias](#---alias---)  
+	* [индексация](#---инидексация---)  
+
 ## Комманды npm:   
 ___
 `npm install npm@latest -g` - node установить последнюю версию:  
@@ -74,14 +80,14 @@ ___
   
 ## Cоздание проекта Git 
 ___
-**создаем конфигурации**
+### ---создаем конфигурации---
   
 `~/.gitconfig` - глобальный конфиг git  
 `.gitignore` - файл с списком игнорируемых файлов  
 `git config --global user.name "Poliakh Roman"`  
 `git config --global user.email "r.poliakh@gmail.com"`  
   
-**запускаем в папке проекта**  
+### ---запускаем в папке проекта---
 `git init` - инициализация проекта  
 `git config user.name "test User"`  
 `git config user.email "test@litle.com"`  
@@ -96,7 +102,7 @@ ___
 
 
 ### ---инидексация---
-
+<a name="indexing"></a>
 `git -a -m"[masage]"`  
 `git add .` - индексирование  всех файлов  
 `git add [имя файла]` - индексирование файла  
