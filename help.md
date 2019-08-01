@@ -159,7 +159,7 @@ ___
 `git branch` - просмоgit ыетр веток  
 `git branch -v` - просмотр версии веток  
 `git branch -d [имя ветки]` - удалить ветку  
-`git push origin --delete <branchName>` - удалить ветку на удаленном репозитории.
+`git push origin --delete <branchName>` - удалить ветку на удаленном репозитории.  
 `git git branch --merged || --no-merged` - позволяют осмотреть какие ветки слиты (или не слиты)  
 `git checkout [имя ветки] ` - переход в ветку  
   
