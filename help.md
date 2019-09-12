@@ -85,20 +85,20 @@ ___
   
 ## Cоздание проекта Git 
 ___
-### ---создаем конфигурации---
+### -- создаем конфигурации --
   
 `~/.gitconfig` - глобальный конфиг git  
 `.gitignore` - файл с списком игнорируемых файлов  
 `git config --global user.name "Poliakh Roman"`  
 `git config --global user.email "r.poliakh@gmail.com"`  
   
-### ---запускаем в папке проекта---
+### -- запускаем в папке проекта --
 `git init` - инициализация проекта  
 `git config user.name "test User"`  
 `git config user.email "test@litle.com"`  
 		
 		
-### ---alias---
+### -- alias --
 ---
 `git config --global alias.st status` - __"git status"__  по ключу  __"git st"__  
   
@@ -106,7 +106,7 @@ ___
 `git reset HEAD -- fileA`  
 
 
-### ---инидексация---
+### -- инидексация --
 <a name="indexing"></a>
 `git -a -m"[masage]"`  
 `git add .` - индексирование  всех файлов  
@@ -128,7 +128,7 @@ ___
   
 `git help [key]` - отправка на страницу справки по ключику, например  "git help log"  
 
-### ---логи---
+### -- логи --
 
 `git log` - просмотр истории коммитов  
 `git log --pretty=format:"%h - %an, %ar : %s"` - вывод информации хешкод - имя атвора, когда сделано : комментарий  
@@ -141,11 +141,11 @@ ___
 `git log --stat` - log c списком измененных вайлов  
   
 	
-### ---замена редактора для коммита---
+### -- замена редактора для коммита --
 
 `git config --global core.editor "'C:\Users\Roman\Downloads\emacs-26.1-x86_64\bin\emacs.exe' -multiInst -notabbar -nosession -noPlugin"`  
 	
-### ---ветки---
+### -- ветки --
 	
 `git remote` - посмотреть удаленные ркпозитории  
 `git remote -v` - посмотреть адрес репозитария  
@@ -167,7 +167,7 @@ ___
 `git clone -b [имя ветки] [url] .` - скопировать нужную ветку в текущую папку  
 `git checkout -b  [имя ветки] origin/[имя ветки на реп]` - добавить нужную ветку    
 
-### ---корзина---
+### -- корзина --
 
 `git stash list` - отобразить список stash  
 `git stash show` - показать последнее изменение  
@@ -175,7 +175,7 @@ ___
 `git stash drop` - удаляет последни stash  
 `git stash clear` - удаляет все stash  
   
-### --- плагин разрешения конфликтов ---
+### -- плагин разрешения конфликтов --
   
 `git config --global mergetool.kdiff3.cmd '"D:\\Program Files\\KDiff3\\kdifа3" $BASE $LOCAL $REMOTE -o $MERGED'` - подключение  плагина KDiff3 (предварительно установить в системе)  
 		[Oтсюда(youtube)](https://youtu.be/xAKnRuYobdc?list=PLoonZ8wII66iUm84o7nadL-oqINzBLk5g&t=430)  
@@ -187,7 +187,7 @@ ___
 `git config --global push.default matching` - будет пушить те ветки которые уже есть в репозитории  
 `git config --global push.default simple` - будет пушить только текущую ветку  
   
-### --- возврат изменение ---
+### -- возврат изменение --
 **Об отмене изменений больше** [тут](https://ru.stackoverflow.com/questions/431520/%D0%9A%D0%B0%D0%BA-%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%82%D1%8C%D1%81%D1%8F-%D0%BE%D1%82%D0%BA%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F-%D0%BA-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D0%BC%D1%83-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D1%83)  
 `git reset --soft HEAD^` - отменит коммит но не изменения которые были сделаны  
 `git reset --hard HEAD`  - отменит изменения и вернется на последний коммит  
