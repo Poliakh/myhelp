@@ -143,9 +143,9 @@ ___
 	
 ### -- замена редактора для коммита --
 
-`git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"` 
-	 или просто добавить в .gitconfig строку:
-	 `[core]
+`git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`  
+	 или просто добавить в .gitconfig строку:  
+	 `[core]  
 	editor = 'C:\\Program Files (x86)\\Notepad++\\notepad++.exe' -multiInst -notabbar -nosession -noPlugin-nosession -noPlugin`
 	
 ### -- ветки --
