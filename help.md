@@ -1,10 +1,22 @@
 ﻿[Makdown](https://guides.hexlet.io/markdown/) - синтаксис  
-[stackedit.io](https://stackedit.io/) - редактор  
+[stackedit.io](https://stackedit.io/) - онлайн редактор .md  
+[Типичные ошипки  Git](https://habr.com/ru/company/flant/blog/419733/)
+
 [Список ссылкок для front-end](https://www.youtube.com/watch?v=hiM9q4dsO-E)   
 
-## Комманды npm:  
-___
+* GIT  
+	* [Конфигурация](#---создаем-конфигурации---)  
+	* [Запуск проекта](#---запускаем-в-папке-проекта---)  
+	* [Alias](#---alias---)  
+	* [Индексация](#---инидексация---)  
+	* [Логи](#---логи---)  
+	* [Ветки](#---ветки---)  
+	* [Корзина](#---корзина---)  
+	* [Плагин разрешения конфликтов](#---плагин-разрешения-конфликтов---)  
+	
 
+## Комманды npm:   
+___
 `npm install npm@latest -g` - node установить последнюю версию:  
 `npm update npm -g`  - обновить node   
 `npx npm-update-all` - Если же мы хотим обновить всё до последней версии, можем 		использовать инструмент npm-update-all. Для этого нужно запустить эту команду в папке 		нашего проекта.  
@@ -15,6 +27,7 @@ ___
 `npm -g ls --depth=0` - список глобально установленных пакетов  
 `npm outdated` - проверить, не устарели ли пакеты  
 `npm update gulp` - обновление версий плагинов  
+`npm update --save` - обновить npm пакеты проекта за записью новых версий в package.json  
 `npm init` - создать package.json  
 `npm install package_name` - установить пакет (package_name - название нужного пакета)  
 `npm install package_name --save-dev` - установить пакет и вносит запись о нем в package.jsonв секцию devDependencies  
@@ -76,23 +89,23 @@ ___
 
 
 
-
-## Cоздание проекта 
+  
+## Cоздание проекта Git 
 ___
-**создаем конфигурации**
-
+### -- создаем конфигурации --
+  
 `~/.gitconfig` - глобальный конфиг git  
 `.gitignore` - файл с списком игнорируемых файлов  
 `git config --global user.name "Poliakh Roman"`  
 `git config --global user.email "r.poliakh@gmail.com"`  
-
-**запускаем в папке проекта**  
+  
+### -- запускаем в папке проекта --
 `git init` - инициализация проекта  
 `git config user.name "test User"`  
 `git config user.email "test@litle.com"`  
 		
 		
-### ---alias---
+### -- alias --
 ---
 `git config --global alias.st status` - __"git status"__  по ключу  __"git st"__  
 
@@ -100,8 +113,8 @@ ___
 `git reset HEAD -- fileA`  
 
 
-### ---инидексация---
-
+### -- инидексация --
+<a name="indexing"></a>
 `git -a -m"[masage]"`  
 `git add .` - индексирование  всех файлов  
 `git add [имя файла]` - индексирование файла  
@@ -122,7 +135,7 @@ ___
 
 `git help [key]` - отправка на страницу справки по ключику, например  "git help log"  
 
-### --- логи ---
+### -- логи --
 
 `git log` - просмотр истории коммитов  
 `git log --pretty=format:"%h - %an, %ar : %s"` - вывод информации хешкод - имя атвора, когда сделано : комментарий  
@@ -132,16 +145,18 @@ ___
 `git log --since=weeks` - лог за последние две недели  
 `git log -p -2` - показать изменения последних двух коммитов  
 `git log -p --word-diff ` - толком не понял что отобразить, что-то там с разницей в коментах по слову  
-`git log --stat` - log c списком измененных файлов  
+`git log --stat` - log c списком измененных вайлов  
 
+### -- замена редактора для коммита --
 
-### ---замена редактора для коммита---
-
-`git config --global core.editor "'C:\Users\Roman\Downloads\emacs-26.1-x86_64\bin\emacs.exe' -multiInst -notabbar -nosession -noPlugin"`  
+`git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`  
+	 или просто добавить в .gitconfig строку:  
+	 `[core]  
+	editor = 'C:\\Program Files (x86)\\Notepad++\\notepad++.exe' -multiInst -notabbar -nosession -noPlugin-nosession -noPlugin`
 	
-### ---ветки---
-
-`git remote` - посмотреть удаленные репозитории  
+### -- ветки --
+	
+`git remote` - посмотреть удаленные ркпозитории  
 `git remote -v` - посмотреть адрес репозитария  
 `git remote add [сокращение] [url]` - добавление удаленного репозитория  
 `git remote show` - инспекция  удаленного репозитория  
@@ -153,31 +168,30 @@ ___
 `git branch` - просмоgit ыетр веток  
 `git branch -v` - просмотр версии веток  
 `git branch -d [имя ветки]` - удалить ветку  
-`git push origin --delete <branchName>` - удалить ветку на удаленном репозитории.
+`git push origin --delete <branchName>` - удалить ветку на удаленном репозитории.  
 `git git branch --merged || --no-merged` - позволяют осмотреть какие ветки слиты (или не слиты)  
 `git checkout [имя ветки] ` - переход в ветку  
 
-`git clone [url] -b [имя ветки]` - скопирует нужную ветку  
-`git clone -b [имя ветки] [url] .` - скопировать нужную ветку в текущую папку  
-`git checkout -b  [имя ветки] origin/[имя ветки на реп]` - добавить нужную ветку  
+`git clone [url]` - клонировать удаленный репозиторий в одноименную папку  
+`git clone [url] .`- клонировать репозиторий в текущую папку  
+`git clone [url] foldername`- клонировать удаленный репозиторий в папку «foldername»  
+
+`git clone [url] -b [имя ветки]` - скпоирует нужную ветку  
+`git clone -b [имя ветки] [url] .` - скопировать нужную ветку в текущую папку   
+`git checkout -b  [имя ветки] origin/[имя ветки на реп]` - добавить нужную ветку      
 
 
 
-
-`git clone -b [имя ветки] [url] .` - скопировать нужную ветку в текущую папку
-
-`git checkout -b  [имя ветки] origin/[имя ветки на реп]` - добавить нужную ветку
-
-### --- корзина ---
+### -- корзина --
 
 `git stash list` - отобразить список stash  
 `git stash show` - показать последнее изменение  
 `git stash apply` - показать последнее изменение  
 `git stash drop` - удаляет последний stash  
 `git stash clear` - удаляет все stash  
-
-### --- плагин разрешения конфликтов---
-
+  
+### -- плагин разрешения конфликтов --
+  
 `git config --global mergetool.kdiff3.cmd '"D:\\Program Files\\KDiff3\\kdifа3" $BASE $LOCAL $REMOTE -o $MERGED'` - подключение  плагина KDiff3 (предварительно установить в системе)  
 		[Oтсюда(youtube)](https://youtu.be/xAKnRuYobdc?list=PLoonZ8wII66iUm84o7nadL-oqINzBLk5g&t=430)  
 `git config --global merge.tool kdiff3` - указать чем программе разбирать конфликт  
@@ -187,9 +201,11 @@ ___
 `git romote -v` - посмотреть версии репозиториев  
 `git config --global push.default matching` - будет пушить те ветки которые уже есть в репозитории  
 `git config --global push.default simple` - будет пушить только текущую ветку  
-
-### ---возврат изменение---
+  
+### -- возврат изменение --
+**Об отмене изменений больше** [тут](https://ru.stackoverflow.com/questions/431520/%D0%9A%D0%B0%D0%BA-%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%82%D1%8C%D1%81%D1%8F-%D0%BE%D1%82%D0%BA%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F-%D0%BA-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D0%BC%D1%83-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D1%83)  
 `git reset --soft HEAD^` - отменит коммит но не изменения которые были сделаны  
+`git reset --hard HEAD`  - отменит изменения и вернется на последний коммит  
 `git reset HEAD  text.txt` - отмена индексирования  
 >после сброса необходимо сделать   __git checkout[namefiles]__  для возврата состояния файла
 >
@@ -198,6 +214,12 @@ ___
 `vim [имя файлв для редактированя]` - для выхода набрать  :qa!  
 
 `git mv [old name] [new name]` - переименование файла  
+  
+`git pull [remoteName] [branch]  --allow-unrelated-histories` - для слияние независимых веток одного проекта   
+
+### -- удаление коммита --
+`git reset --hard HEAD~1`  - удалить комит   
+`git push origin HEAD --force` - приинудительно зальет на репозиторий без последнего комита
 
 `git pull [remoteName] [branch]  --allow-unrelated-histories` - для слияние независимых веток одного проекта  
 
