@@ -7,7 +7,7 @@
 	в таком режиме вебпак запустит сборку по умолчанию (продакшн) если найдет папку _'src'_ и в ней _'index.js'_.
 	Для запуска мода разработчика :
 	>npx webpack --mode development
-* Создвем файл конфигурации  _webpack.config.js_
+* Создаем файл конфигурации  _webpack.config.js_
 	первая конфигурация
 
 		module.exports = {
@@ -25,6 +25,7 @@
 	>npm install --save-dev file-loader
 * добавялем в конфиг новую конфигурацию  _"model"_ и правила  _"role"_
 
+```
 	module.exports = {
 		mode: "development",
 
@@ -39,6 +40,7 @@
 	};
 
 	...
+```
 
 * Установка babel-loader:
 	>npm install --save-dev babel-loader
