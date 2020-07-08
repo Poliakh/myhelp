@@ -33,7 +33,7 @@ ___
 `npm install package_name --save-dev` - установить пакет и вносит запись о нем в package.jsonв секцию devDependencies  
 `npm uninstall package_name` - удаление пакета  
 `npm install || i` - установить все пакеты, перечисленные в package.json  
-`find . -name "node_modules" -exec rm -rf '{}' +` - ввод в терминал удаляет папки -node_modules рекурсивно
+`find . -name "node_modules" -exec rm -rf '{}' +` - ввод в терминал удаляет папки -node_modules рекурсивно  
 [**обновление пакетов  npm**](https://tyapk.ru/blog/post/how-to-update-npm-packages)
 
 >Перед запуском в продакшн **npm shrinkwrap** - фиксируем версии пакетов,теперь **npm install** будет устанавливать именно их и вы будете уверены что все будет работать как надо  
