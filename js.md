@@ -1,0 +1,1 @@
+".className".replase(/\./,'') = "className"  
