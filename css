@@ -1,0 +1,7 @@
+p{//обрезает текст в блоке с указанием нужного колличеством строк.
+text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
