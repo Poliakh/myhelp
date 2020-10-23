@@ -207,7 +207,7 @@ ___
 ### -- возврат изменение --
 **Об отмене изменений больше** [тут](https://ru.stackoverflow.com/questions/431520/%D0%9A%D0%B0%D0%BA-%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%82%D1%8C%D1%81%D1%8F-%D0%BE%D1%82%D0%BA%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F-%D0%BA-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D0%BC%D1%83-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D1%83)  
 `git reset --soft HEAD^` - отменит коммит но не изменения которые были сделаны  
-`git reset --hard HEAD`  - отменит изменения и вернется на последний коммит  
+`git reset --hard HEAD` или `git reset --hard`  - отменит изменения и вернется на последний коммит  
 `git reset HEAD  text.txt` - отмена индексирования  
 >после сброса необходимо сделать   __git checkout[namefiles]__  для возврата состояния файла
 >
@@ -218,6 +218,7 @@ ___
 `git mv [old name] [new name]` - переименование файла  
   
 `git pull [remoteName] [branch]  --allow-unrelated-histories` - для слияние независимых веток одного проекта   
+`git checkout [filename1] [filename2]` - восстановит изменения в перечисленных файлах до поледнего коммита  
 
 ### -- удаление коммита --
 `git reset --hard HEAD~1`  - удалить комит   
